@@ -9,8 +9,7 @@ public class Main {
 		
 		String path = "result.txt";
 		Arithmetic ar = new Arithmetic();
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
+		int n = Integer.parseInt(args[0]);
 		 try {
 			BufferedWriter bw = new BufferedWriter(new FileWriter(path));
 			bw.write("201571030131");
@@ -23,8 +22,6 @@ public class Main {
 					 bw.write(str + "=" + result);
 					 bw.newLine();
 					 i++;
-					 System.out.println(str);
-					 int ans = sc.nextInt();
 				}				
 			}
 			bw.close();
