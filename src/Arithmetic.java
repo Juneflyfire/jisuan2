@@ -36,9 +36,9 @@ public class Arithmetic {
 		if (t == 0){
 			String  str1 = operate[r.nextInt(4)];
 			String  str2 = operate[r.nextInt(4)];
-			if (str1.equals(str2))
-				return null;
-			else 
+		//	if (str1.equals(str2))
+			//	return null;
+		//	else 
 				return number[r.nextInt(101)] + str1 + number[r.nextInt(101)] + str2
 						+ number[r.nextInt(101)];			
 		}
@@ -46,9 +46,9 @@ public class Arithmetic {
 			String  str1 = operate[r.nextInt(4)];
 			String  str2 = operate[r.nextInt(4)];
 			String  str3 = operate[r.nextInt(4)];
-			if(str1.equals(str2)&&str1.equals(str3))
-				return null;
-			else 
+	//		if(str1.equals(str2)&&str1.equals(str3))
+	//			return null;
+	//		else 
 				return number[r.nextInt(101)] + str1 + number[r.nextInt(101)] + str2
 						+ number[r.nextInt(101)] + str3 + number[r.nextInt(101)];
 		}
@@ -57,9 +57,9 @@ public class Arithmetic {
 			String  str2 = operate[r.nextInt(4)];
 			String  str3 = operate[r.nextInt(4)];
 			String  str4 = operate[r.nextInt(4)];
-			if(str1.equals(str2)&&str1.equals(str3)&&str1.equals(str4))
-				return null;
-			else
+			//if(str1.equals(str2)&&str1.equals(str3)&&str1.equals(str4))
+			//	return null;
+			//else
 				return number[r.nextInt(101)] + str1 + number[r.nextInt(101)] + str2
 						+ number[r.nextInt(101)] + str3 + number[r.nextInt(101)] + str4
 						+ number[r.nextInt(101)];
@@ -71,8 +71,8 @@ public class Arithmetic {
 	 * 将 中缀表达式 转化为 后缀表达式
 	 */
 	public String toSuffix(String infix) {
-		if(infix==null)
-			return null;
+	//	if(infix==null)
+	//		return null;
 		List<String> queue = new ArrayList<String>();// 定义队列 用于存储 数字 以及最后的 后缀表达式
 		List<Character> stack = new ArrayList<Character>();// 定义栈 用于存储 运算符,最后stack中会被 弹空
 
@@ -142,8 +142,8 @@ public class Arithmetic {
 	 * 将 后缀表达式 进行 运算 计算出结果
 	 */
 	public String dealEquation(String equation) {
-		if(equation==null)
-			return null;
+//		if(equation==null)
+//			return null;
 		String[] arr = equation.split(",");
 		List<String> list = new ArrayList<String>();
 		for (int i = 0; i < arr.length; i++) {
@@ -156,11 +156,11 @@ public class Arithmetic {
 			case "-":
 				int b1 = Integer.parseInt(list.remove(size - 2));
 				int b2 = Integer.parseInt(list.remove(size - 2));
-				if (b1 - b2 >= 0) {
+			//	if (b1 - b2 >= 0) {
 					int b = b1 - b2;
 					list.add(String.valueOf(b));
-				} else
-					return null;
+			//	} //else
+					//return null;
 				break;
 			case "*":
 				int c = Integer.parseInt(list.remove(size - 2)) * Integer.parseInt(list.remove(size - 2));
@@ -169,11 +169,11 @@ public class Arithmetic {
 			case "/":
 				int d1 = Integer.parseInt(list.remove(size - 2));
 				int d2 = Integer.parseInt(list.remove(size - 2));
-				if (d2 != 0 && d1 % d2 == 0) {
+			//	if (d2 != 0 && d1 % d2 == 0) {
 					int d = d1 / d2;
 					list.add(String.valueOf(d));
-				} else
-					return null;
+					 //	}else
+					//return null;
 				break;
 			default:
 				list.add(arr[i]);
