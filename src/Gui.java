@@ -96,18 +96,13 @@ public class Gui extends JFrame
 		
 		l1.setBounds(390,10,80,30);
 		l2.setBounds(455,10,80,30);
-	//	l4.setBounds(100,10,100,30);
-		
-		
-		
+
 		//设置面板
 		pan1.setLayout(null);
 		pan1.setBounds(0,0,600,550);
 		//设置按钮
 		BT4.setBounds(50,400,100,50);//测评
 		BT2.setBounds(450,400,100,50);
-//		BT3.setBounds(310,400,100,50);
-//		BT4.setBounds(250,400,100,50);
 		
 		BT5.setBounds(50,460,100,30);
 		BT6.setBounds(250,460,100,30);
@@ -119,7 +114,6 @@ public class Gui extends JFrame
 		//设置文本框
 		
 		f1.setBounds(10,45,120,30);
-	//	f2.setBounds(10,80,120,30);
 		f3.setBounds(10,115,120,30);
 		f4.setBounds(10,150,120,30);
 		f5.setBounds(10,185,120,30);
@@ -221,9 +215,7 @@ public class Gui extends JFrame
 		pan1.add(a19);
 		pan1.add(a20);
 		
-//		pan1.add(BT1);
 		pan1.add(BT2);
-//		pan1.add(BT3);
 		pan1.add(BT4);
 		pan1.add(BT5);
 		pan1.add(BT6);
@@ -231,14 +223,7 @@ public class Gui extends JFrame
 		pan1.add(BT8);
 		pan1.add(BT9);
 		pan1.add(BT10);
-	
-		
-		
-		
-		
-		//添加监听器	
-	//	BT1.addActionListener(J1);
-	//	BT1.setActionCommand("S1");
+
 		BT2.addActionListener(J1);
 		BT2.setActionCommand("S2");
 		
@@ -265,15 +250,7 @@ public class Gui extends JFrame
     {
 	    public void actionPerformed(ActionEvent event)
 	   {
-	    //	double IN1=Double.parseDouble(Grade1.getText());
 			String input = event.getActionCommand();
-	//		if(input.equals("S1"))//button1信号
-	//		{
-				//清空文本框
-				
-				//
-				
-		//	}
 			if(input.equals("S2"))//提交答案
 			{
 				String []res = new String[20];
@@ -284,17 +261,14 @@ public class Gui extends JFrame
 					BufferedReader br = new BufferedReader(new FileReader("result1.txt"));
 					String nString = br.readLine();
 					res[0] = nString;
-					System.out.println(res[0]);
 					while (nString != null) {
 						nString=br.readLine();
 			            res[i]= nString;
-			            System.out.println(res[i]);
 			            i++;
 			            
 			        }
 			        br.close();
 				} catch (Exception e) {
-					// TODO: handle exception
 				}
 				
 		
@@ -303,7 +277,6 @@ public class Gui extends JFrame
 				if(a1.getText().equals(res[0]))
 				{
 					sum += 5;	
-					System.out.println(sum);
 				}
 				if(a2.getText().equals(res[1]))
 					sum += 5;
@@ -344,7 +317,6 @@ public class Gui extends JFrame
 					sum += 5;
 				if(a20.getText().equals(res[19]))
 					sum += 5;
-			//	System.out.println(sum);
 				String sco = sum + "";
 				l2.setText(sco);
 				
@@ -365,11 +337,11 @@ public class Gui extends JFrame
     			jf.add(SS); 
     			jf.setVisible(true);
     			int len = Grade.size();
-    			jf.setSize( 30*len+50,700);
+    			jf.setSize(30*len+50,700);
     			jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     			jf.setResizable(false);
 			}
-			if(input.equals("S5"))
+			if(input.equals("S5"))//简体中文
 			{
 				La1="得分";
 				La2="计时";
@@ -380,11 +352,8 @@ public class Gui extends JFrame
 				La8="繁体中文";
 				La9="英文";
 				La10="整数运算";
-				La11="分数运算";
-				
+				La11="分数运算";				
 				l1.setText(La1);
-				
-	//			BT1.setText(La4);
 				BT4.setText(La6);
 				BT2.setText(La5);
 				BT5.setText(La7);
@@ -405,11 +374,8 @@ public class Gui extends JFrame
 				La8="繁體中文";
 				La9="英文";
 				La10="整數運算";
-				La11="分數運算";
-				
+				La11="分數運算";				
 				l1.setText(La1);
-				
-		//		BT1.setText(La4);
 				BT4.setText(La6);
 				BT2.setText(La5);
 				BT5.setText(La7);
@@ -431,11 +397,8 @@ public class Gui extends JFrame
 				La8="Traditional Chinese";
 				La9="English";
 				La10="Integer arithmetic";
-				La11="Fraction arithmetic";
-		
+				La11="Fraction arithmetic";		
 				l1.setText(La1);
-				
-		//		BT1.setText(La4);
 				BT4.setText(La6);
 				BT2.setText(La5);
 				BT5.setText(La7);
@@ -443,8 +406,7 @@ public class Gui extends JFrame
 				BT7.setText(La9);
 				BT8.setText(La2);
 				BT9.setText(La10);
-				BT10.setText(La11);
-				
+				BT10.setText(La11);	
 			}	
 			if(input.equals("S8"))//計時功能
 			{

@@ -23,13 +23,13 @@ public class BarGraph extends JPanel
 		}
 		for(int i=1;i<summer.size();i=i+2)
 		{
-			//JLabel  Label = new JLabel("µÚ"+((i+1)/2)+"ÂÖ",JLabel.LEFT);
-			//Label.setFont(new Font("SansSerif", Font.BOLD + Font.ITALIC, 18));
-		//	Label.setBounds(30+(i-1)*30, 610, 60,50);
+			JLabel  Label = new JLabel("柱状图",JLabel.LEFT);
+			Label.setFont(new Font("SansSerif", Font.BOLD + Font.ITALIC, 18));
+			Label.setBounds(30+(i-1)*30, 610, 60,50);
 			JLabel  Label2 = new JLabel(count[i]+"",JLabel.CENTER);
 			Label2.setFont(new Font("SansSerif", Font.BOLD + Font.ITALIC, 18));
 			Label2.setBounds(25+(i-1)*30, 555-6*count[i], 60,50);
-	//		label.add(Label);
+			label.add(Label);
 			label.add(Label2);
 			this.add(label.get(i-1));
 			this.add(label.get(i));  
